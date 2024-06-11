@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="top"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/lblSelectACommand"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="5dp"
+        android:text="@string/select_a_command"
+        />
+
+    <Spinner
+        android:id="@+id/cbCommands"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/background_light"
+        android:layout_below="@id/lblSelectACommand"
+        android:layout_marginLeft="5dp"
+        android:spinnerMode="dropdown"
+        />
+
+
+    <TextView
+        android:id="@+id/lblParameter_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cbCommands"
+        android:layout_marginLeft="5dp"
+        android:text="@string/select_a_parameter"
+        />
+
+    <Spinner
+        android:id="@+id/cbParameter_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/background_light"
+        android:layout_below="@id/lblParameter_1"
+        android:layout_marginLeft="5dp"
+        android:spinnerMode="dropdown"
+        />
+
+    <TextView
+        android:id="@+id/lblParameter_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cbParameter_1"
+        android:layout_marginLeft="5dp"
+        android:text="@string/select_a_parameter"
+        />
+
+    <Spinner
+        android:id="@+id/cbParameter_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/background_light"
+        android:layout_below="@id/lblParameter_2"
+        android:layout_marginLeft="5dp"
+        android:spinnerMode="dropdown"
+        />
+
+    <TextView
+        android:id="@+id/lblParameter_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cbParameter_2"
+        android:layout_marginLeft="5dp"
+        android:text="@string/select_a_parameter"
+        />
+
+    <Spinner
+        android:id="@+id/cbParameter_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/background_light"
+        android:layout_below="@id/lblParameter_3"
+        android:layout_marginLeft="5dp"
+        android:spinnerMode="dropdown"
+        />
+
+    <TextView
+        android:id="@+id/lblParamValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cbParameter_3"
+        android:layout_marginLeft="5dp"
+        />
+
+    <EditText
+        android:id="@+id/txtParamValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lblParamValue"
+        android:layout_marginLeft="5dp"
+        android:inputType="textNoSuggestions"
+        android:textSize="16sp"
+        />
+
+    <Button
+        android:id="@+id/btnExecute"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtParamValue"
+        android:text="@string/execute" />
+
+    <TextView
+        android:id="@+id/txtConsole"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnExecute"
+        android:layout_marginLeft="5dp"
+        android:inputType="textMultiLine|textNoSuggestions"
+        android:lines="3"
+        android:gravity="bottom"
+        android:scrollbars="vertical"
+        android:text=""
+        />
+
+    <Button
+        android:id="@+id/btnClear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="@string/clear"
+        />
+
+    <EditText
+        android:id="@+id/txtScan2KeyData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btnClear"
+        android:layout_marginLeft="5dp"
+        android:inputType="textMultiLine|textNoSuggestions"
+        android:textSize="16sp"
+        android:lines="3"
+        android:gravity="top"
+        android:scrollbars="vertical"
+        android:hint="@string/received_with_scan2key"
+        android:text=""
+        />
+
+    <TextView
+        android:id="@+id/txtIntentData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/txtScan2KeyData"
+        android:layout_marginLeft="5dp"
+        android:inputType="textMultiLine|textNoSuggestions"
+        android:textSize="16sp"
+        android:lines="12"
+        android:gravity="top"
+        android:scrollbars="vertical"
+        android:hint="@string/received_with_intent"
+        android:text=""
+        />
+
+</RelativeLayout>

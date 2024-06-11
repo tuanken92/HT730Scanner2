@@ -1,0 +1,1287 @@
+<resources>
+    <string name="app_name">HT730Scanner</string>
+    <string name="select_a_command">Select a command:</string>
+    <string name="select_a_parameter_group">Select a parameter group:</string>
+    <string name="select_a_parameter">Select a parameter:</string>
+    <string name="select_a_value">Select a value:</string>
+    <string name="execute">Execute</string>
+    <string name="clear">Clear</string>
+    <string name="received_with_intent">Received with Intent:</string>
+    <string name="received_with_scan2key">Received with Scan2Key:</string>
+
+    <string name="settings_file_location">USISETTINGS.CFG location:</string>
+    <string name="default_settings_file_location">/sdcard/</string>
+    <string name="preamble">Preamble:</string>
+    <string name="postamble">Postamble:</string>
+    <string name="terminator">Terminator:</string>
+    <string name="default_terminator">&lt;LF&gt;</string>
+
+    <string-array name="UPC_EAN">
+        <item>{
+			"Parameter":"UPC-A",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0x01
+		}</item>
+        <item>{
+			"Parameter":"UPC-E",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0x02
+		}</item>
+        <item>{
+			"Parameter":"UPC-E1",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0x0C
+		}</item>
+        <item>{
+			"Parameter":"EAN-8",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0x04
+		}</item>
+        <item>{
+			"Parameter":"EAN-13",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0x03
+		}</item>
+        <item>{
+			"Parameter":"'Bookland EAN'",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0x53
+		}</item>
+        <item>{
+			"Parameter":"'Bookland ISBN Format'",
+			"Type":2,
+			"Min":0,
+			"Max":1,
+			"Hex":0xF140,
+			"Tag":{
+				"'0'":"'Bookland ISBN-10'",
+				"'1'":"'Bookland ISBN-13'"
+			}
+		}</item>
+        <item>{
+			"Parameter":"'Decode UPC/EAN Supplementals'",
+			"Type":2,
+			"Min":0,
+			"Max":8,
+			"Hex":0x10,
+			"Tag":{
+				"'0'":"'Ignore UPC/EAN With Supplementals'",
+				"'1'":"'Decode UPC/EAN With Supplementals'",
+				"'2'":"'Autodiscriminate UPC/EAN Supplementals'",
+				"'3'":"'Enable Smart Supplemental Mode'",
+				"'4'":"'Enable 378/379 Supplemental Mode'",
+				"'5'":"'Enable 978/979 Supplemental Mode'",
+				"'6'":"'Enable 414/419/434/439 Supplemental Mode'",
+				"'7'":"'Enable 977 Supplemental Mode'",
+				"'8'":"'Enable 491 Supplemental Mode'"
+			}
+		}</item>
+        <item>{
+			"Parameter":"'UPC/EAN/JAN Supplemental Redundancy'",
+			"Type":3,
+			"Min":2,
+			"Max":20,
+			"Hex":0x50
+		}</item>
+        <item>{
+			"Parameter":"'UPC/EAN/JAN Supplemental AIM ID Format'",
+			"Type":2,
+			"Min":0,
+			"Max":1,
+			"Hex":0xF1A0,
+			"Tag":{
+				"'0'":"'Separate'",
+				"'1'":"'Combined'"
+			}
+		}</item>
+        <item>{
+			"Parameter":"'Transmit UPC-A Check Digit'",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0x28
+		}</item>
+        <item>{
+			"Parameter":"'Transmit UPC-E Check Digit'",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0x29
+		}</item>
+        <item>{
+			"Parameter":"'Transmit UPC-E1 Check Digit'",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0x2A
+		}</item>
+        <item>{
+			"Parameter":"'UPC-A Preamble'",
+			"Type":2,
+			"Min":0,
+			"Max":2,
+			"Hex":0x22,
+			"Tag":{
+				"'0'":"'No Preamble'",
+				"'1'":"'System Character'",
+				"'2'":"'System Character and Country Code'"
+			}
+		}</item>
+        <item>{
+			"Parameter":"'UPC-E Preamble'",
+			"Type":2,
+			"Min":0,
+			"Max":2,
+			"Hex":0x23,
+			"Tag":{
+				"'0'":"'No Preamble'",
+				"'1'":"'System Character'",
+				"'2'":"'System Character and Country Code'"
+			}
+		}</item>
+        <item>{
+			"Parameter":"'UPC-E1 Preamble'",
+			"Type":2,
+			"Min":0,
+			"Max":2,
+			"Hex":0x24,
+			"Tag":{
+				"'0'":"'No Preamble'",
+				"'1'":"'System Character'",
+				"'2'":"'System Character and Country Code'"
+			}
+		}</item>
+        <item>{
+			"Parameter":"'Convert UPC-E to A'",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0x25
+		}</item>
+        <item>{
+			"Parameter":"'Convert UPC-E1 to A'",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0x26
+		}</item>
+        <item>{
+			"Parameter":"'EAN-8 Zero Extend'",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0x27
+		}</item>
+        <item>{
+			"Parameter":"'UPC/EAN Security Level'",
+			"Type":2,
+			"Min":0,
+			"Max":3,
+			"Hex":0x4D,
+			"Tag":{
+				"'0'":"'UPC/EAN Security Level 0'",
+				"'1'":"'UPC/EAN Security Level 1'",
+				"'2'":"'UPC/EAN Security Level 2'",
+				"'3'":"'UPC/EAN Security Level 3'"
+			}
+		}</item>
+        <item>{
+			"Parameter":"'UCC Coupon Extended Code'",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0x55
+		}</item>
+        <item>{
+			"Parameter":"'Coupon Report'",
+			"Type":2,
+			"Min":0,
+			"Max":2,
+			"Hex":0xF1DA,
+			"Tag":{
+				"'0'":"'Old Coupon Symbols'",
+				"'1'":"'New Coupon Symbols'",
+				"'2'":"'Both Coupon Format'"
+			}
+		}</item>
+        <item>{
+			"Parameter":"'ISSN EAN'",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0xF169
+		}</item>
+    </string-array>
+
+    <string-array name="Code_128">
+        <item>{
+			"Parameter":"'Code 128'",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0x08
+		}</item>
+        <item>{
+			"Parameter":"'Length L1'",
+			"Type":3,
+			"Min":0,
+			"Max":55,
+			"Hex":0xD1
+		}</item>
+        <item>{
+			"Parameter":"'Length L2'",
+			"Type":3,
+			"Min":0,
+			"Max":55,
+			"Hex":0xD2
+		}</item>
+        <item>{
+			"Parameter":"'GS1-128'",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0x0E
+		}</item>
+        <item>{
+			"Parameter":"'ISBT 128'",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0x54
+		}</item>
+        <item>{
+			"Parameter":"'ISBT Concatenation'",
+			"Type":2,
+			"Min":0,
+			"Max":2,
+			"Hex":0xF141,
+			"Tag":{
+				"'0'":"'Disable ISBT Concatenation'",
+				"'1'":"'Enable ISBT Concatenation'",
+				"'2'":"'Autodiscriminate ISBT Concatenation'"
+			}
+		}</item>
+        <item>{
+			"Parameter":"'Check ISBT Table'",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0xF142
+		}</item>
+        <item>{
+			"Parameter":"'ISBT Concatenation Redundancy'",
+			"Type":3,
+			"Min":2,
+			"Max":20,
+			"Hex":0xDF
+		}</item>
+        <item>{
+			"Parameter":"'EAN-128 Field Separator'",
+			"Type":2,
+			"Min":0,
+			"Max":0,
+			"Hex":0x0,
+			"Tag":{
+				"'0'":"'Click To Set'"
+			}
+		}</item>
+    </string-array>
+
+    <string-array name="Code_39">
+        <item>{
+			"Parameter":"'Code 39'",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0x00
+		}</item>
+        <item>{
+			"Parameter":"'Trioptic Code 39'",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0x0D
+		}</item>
+        <item>{
+			"Parameter":"'Convert Code 39 to Code 32'",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0x56
+		}</item>
+        <item>{
+			"Parameter":"'Code 32 Prefix'",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0xE7
+		}</item>
+        <item>{
+			"Parameter":"'Length L1'",
+			"Type":3,
+			"Min":0,
+			"Max":48,
+			"Hex":0x12
+		}</item>
+        <item>{
+			"Parameter":"'Length L2'",
+			"Type":3,
+			"Min":0,
+			"Max":48,
+			"Hex":0x13
+		}</item>
+        <item>{
+			"Parameter":"'Check Digit Verification'",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0x30
+		}</item>
+        <item>{
+			"Parameter":"'Transmit Code 39 Check Digit'",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0x2B
+		}</item>
+        <item>{
+			"Parameter":"'Code 39 Full ASCII'",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0x11
+		}</item>
+    </string-array>
+
+    <string-array name="Code_93">
+        <item>{
+			"Parameter":"'Code 93'",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0x09
+		}</item>
+        <item>{
+			"Parameter":"'Length L1'",
+			"Type":3,
+			"Min":1,
+			"Max":48,
+			"Hex":0x1A
+		}</item>
+        <item>{
+			"Parameter":"'Length L2'",
+			"Type":3,
+			"Min":1,
+			"Max":48,
+			"Hex":0x1B
+		}</item>
+    </string-array>
+
+    <string-array name="Code_11">
+        <item>{
+			"Parameter":"'Code 11'",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0x0A
+		}</item>
+        <item>{
+			"Parameter":"'Length L1'",
+			"Type":3,
+			"Min":1,
+			"Max":48,
+			"Hex":0x1C
+		}</item>
+        <item>{
+			"Parameter":"'Length L2'",
+			"Type":3,
+			"Min":1,
+			"Max":48,
+			"Hex":0x1D
+		}</item>
+        <item>{
+			"Parameter":"'Check Digit Verification'",
+			"Type":2,
+			"Min":0,
+			"Max":2,
+			"Hex":0x34,
+			"Tag":{
+				"'0'":"'Disable'",
+				"'1'":"'One Check Digit'",
+				"'2'":"'Two Check Digit'"
+			}
+		}</item>
+        <item>{
+			"Parameter":"'Transmit Code 11 Check Digits'",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0x2F
+		}</item>
+    </string-array>
+
+    <string-array name="I2of5">
+        <item>{
+			"Parameter":"'Interleaved 2 of 5'",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0x06
+		}</item>
+        <item>{
+			"Parameter":"'Length L1'",
+			"Type":3,
+			"Min":2,
+			"Max":55,
+			"Hex":0x16
+		}</item>
+        <item>{
+			"Parameter":"'Length L2'",
+			"Type":3,
+			"Min":2,
+			"Max":55,
+			"Hex":0x17
+		}</item>
+        <item>{
+			"Parameter":"'Check Digit Verification'",
+			"Type":2,
+			"Min":0,
+			"Max":2,
+			"Hex":0x31,
+			"Tag":{
+				"'0'":"'Disable'",
+				"'1'":"'USS Check Digit'",
+				"'2'":"'OPCC Check Digit'"
+			}
+		}</item>
+        <item>{
+			"Parameter":"'Transmit I 2 of 5 Check Digits'",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0x2C
+		}</item>
+        <item>{
+			"Parameter":"'Convert I 2 of 5 to EAN-13'",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0x52
+		}</item>
+    </string-array>
+
+    <string-array name="D2of5">
+        <item>{
+			"Parameter":"'Discrete 2 of 5'",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0x05
+		}</item>
+        <item>{
+			"Parameter":"'Length L1'",
+			"Type":3,
+			"Min":1,
+			"Max":48,
+			"Hex":0x14
+		}</item>
+        <item>{
+			"Parameter":"'Length L2'",
+			"Type":3,
+			"Min":1,
+			"Max":48,
+			"Hex":0x15
+		}</item>
+    </string-array>
+
+    <string-array name="C2of5">
+        <item>{
+			"Parameter":"'Chinese 2 of 5'",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0xF098
+		}</item>
+    </string-array>
+
+    <string-array name="M2of5">
+        <item>{
+			"Parameter":"'Matrix 2 of 5'",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0xF16A
+		}</item>
+        <item>{
+			"Parameter":"'Length L1'",
+			"Type":3,
+			"Min":1,
+			"Max":48,
+			"Hex":0xF16B
+		}</item>
+        <item>{
+			"Parameter":"'Length L2'",
+			"Type":3,
+			"Min":1,
+			"Max":48,
+			"Hex":0xF16C
+		}</item>
+        <item>{
+			"Parameter":"'Matrix 2 of 5 Redundancy'",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0xF16D
+		}</item>
+        <item>{
+			"Parameter":"'Matrix 2 of 5 Check Digit'",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0xF16E
+		}</item>
+        <item>{
+			"Parameter":"'Transmit Matrix 2 of 5 Check Digit'",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0xF16F
+		}</item>
+    </string-array>
+
+    <string-array name="Codabar">
+        <item>{
+			"Parameter":"'Codabar'",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0x07
+		}</item>
+        <item>{
+			"Parameter":"'Length L1'",
+			"Type":3,
+			"Min":3,
+			"Max":48,
+			"Hex":0x18
+		}</item>
+        <item>{
+			"Parameter":"'Length L2'",
+			"Type":3,
+			"Min":3,
+			"Max":48,
+			"Hex":0x19
+		}</item>
+        <item>{
+			"Parameter":"'CLSI Editing'",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0x36
+		}</item>
+        <item>{
+			"Parameter":"'NOTIS Editing'",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0x37
+		}</item>
+    </string-array>
+
+    <string-array name="MSI">
+        <item>{
+			"Parameter":"'MSI'",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0x0B
+		}</item>
+        <item>{
+			"Parameter":"'Length L1'",
+			"Type":3,
+			"Min":1,
+			"Max":16,
+			"Hex":0x1E
+		}</item>
+        <item>{
+			"Parameter":"'Length L2'",
+			"Type":3,
+			"Min":1,
+			"Max":16,
+			"Hex":0x1F
+		}</item>
+        <item>{
+			"Parameter":"'MSI Check Digit'",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0x32
+		}</item>
+        <item>{
+			"Parameter":"'Transmit MSI Check Digit'",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0x2E
+		}</item>
+        <item>{
+			"Parameter":"'MSI Check Digit Algorithm'",
+			"Type":2,
+			"Min":0,
+			"Max":1,
+			"Hex":0x33,
+			"Tag":{
+				"'0'":"'MOD 10/MOD 11'",
+				"'1'":"'MOD 10/MOD 10'"
+			}
+		}</item>
+    </string-array>
+
+    <string-array name="GS1_DataBar">
+        <item>{
+			"Parameter":"'GS1 DataBar Omnidirectional'",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0xF052
+		}</item>
+        <item>{
+			"Parameter":"'GS1 DataBar Limited'",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0xF053
+		}</item>
+        <item>{
+			"Parameter":"'GS1 DataBar Expanded'",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0xF054
+		}</item>
+        <item>{
+			"Parameter":"'Convert GS1 DataBar  to UPC/EAN'",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0xF08D
+		}</item>
+        <item>{
+			"Parameter":"'GS1 DataBar Limited Security Level'",
+			"Type":2,
+			"Min":1,
+			"Max":4,
+			"Hex":0xF1D8,
+			"Tag":{
+				"'1'":"'Security Level 1'",
+				"'2'":"'Security Level 2'",
+				"'3'":"'Security Level 3'",
+				"'4'":"'Security Level 4'"
+				}
+		}</item>
+    </string-array>
+
+    <string-array name="Postal_Codes">
+        <item>{
+			"Parameter":"'US Postnet'",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0x59
+		}</item>
+        <item>{
+			"Parameter":"'US Planet'",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0x5A
+		}</item>
+        <item>{
+			"Parameter":"'Transmit US Postal Check Digit'",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0x5F
+		}</item>
+        <item>{
+			"Parameter":"'UK Postal'",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0x5B
+		}</item>
+        <item>{
+			"Parameter":"'Transmit UK Postal Check Digit'",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0x60
+		}</item>
+        <item>{
+			"Parameter":"'Japan Postal'",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0xF022
+		}</item>
+        <item>{
+			"Parameter":"'Australian Postal'",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0xF023
+		}</item>
+        <item>{
+			"Parameter":"'Netherlands KIX Code'",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0xF046
+		}</item>
+        <item>{
+			"Parameter":"'USPS 4CB/One Code/intelligent mail'",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0xF150
+		}</item>
+        <item>{
+			"Parameter":"'UPU FICS Postal'",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0xF163
+		}</item>
+    </string-array>
+
+    <string-array name="Composite">
+        <item>{
+			"Parameter":"'Composite CC-C'",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0xF055
+		}</item>
+        <item>{
+			"Parameter":"'Composite CC-A/B'",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0xF056
+		}</item>
+        <item>{
+			"Parameter":"'Composite TLC-39'",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0xF073
+		}</item>
+        <item>{
+			"Parameter":"'UPC Compoiste Mode'",
+			"Type":2,
+			"Min":0,
+			"Max":2,
+			"Hex":0xF058,
+			"Tag":{
+				"'0'":"'UPC Never Linked'",
+				"'1'":"'UPC Always Linked'",
+				"'2'":"'Autodiscriminate UPC Composites'"
+				}
+		}</item>
+        <item>{
+			"Parameter":"'Compoiste Beep Mode'",
+			"Type":2,
+			"Min":0,
+			"Max":2,
+			"Hex":0xF08E,
+			"Tag":{
+				"'0'":"'Single Beep after both are decoded'",
+				"'1'":"'Beep as each code type is decoded'",
+				"'2'":"'Double Beep after both are decoded'"
+				}
+		}</item>
+        <item>{
+			"Parameter":"'GS1-128 Emulation Mode for UCC/EAN Composite Codes'",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0xF0AB
+		}</item>
+    </string-array>
+
+    <string-array name="Symbologies_2D">
+        <item>{
+			"Parameter":"'PDF417'",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0x0F
+		}</item>
+        <item>{
+			"Parameter":"'MicroPDF417'",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0xE3
+		}</item>
+        <item>{
+			"Parameter":"'Code 128 Emulation'",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0x7B
+		}</item>
+        <item>{
+			"Parameter":"'Data Matrix'",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0xF024
+		}</item>
+        <item>{
+			"Parameter":"'Data Matrix Inverse'",
+			"Type":2,
+			"Min":0,
+			"Max":2,
+			"Hex":0xF14C,
+			"Tag":{
+				"'0'":"'Regular'",
+				"'1'":"'Inverse Only'",
+				"'2'":"'Inverse Autodetect'"
+				}
+		}</item>
+        <item>{
+			"Parameter":"'Decode Mirror Images (Data Matrix Only)'",
+			"Type":2,
+			"Min":0,
+			"Max":2,
+			"Hex":0xF119,
+			"Tag":{
+				"'0'":"'Never'",
+				"'1'":"'Always'",
+				"'2'":"'Auto'"
+				}
+		}</item>
+        <item>{
+			"Parameter":"'Maxicode'",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0xF026
+		}</item>
+        <item>{
+			"Parameter":"'QR Code'",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0xF025
+		}</item>
+        <item>{
+			"Parameter":"'QR Inverse'",
+			"Type":2,
+			"Min":0,
+			"Max":2,
+			"Hex":0xF14B,
+			"Tag":{
+				"'0'":"'Regular'",
+				"'1'":"'Inverse Only'",
+				"'2'":"'Inverse Autodetect'"
+				}
+		}</item>
+        <item>{
+			"Parameter":"'MicroQR'",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0xF026
+		}</item>
+        <item>{
+			"Parameter":"'Aztec'",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0xF13E
+		}</item>
+        <item>{
+			"Parameter":"'Aztec Inverse'",
+			"Type":2,
+			"Min":0,
+			"Max":2,
+			"Hex":0xF14D,
+			"Tag":{
+				"'0'":"'Regular'",
+				"'1'":"'Inverse Only'",
+				"'2'":"'Inverse Autodetect'"
+				}
+		}</item>
+        <item>{
+			"Parameter":"'Mobile Phone/Display Mode'",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0xF1CC
+		}</item>
+        <item>{
+			"Parameter":"'Picklist Mode'",
+			"Type":2,
+			"Min":0,
+			"Max":2,
+			"Hex":0xF092,
+			"Tag":{
+				"'0'":"'Disabled Always'",
+				"'1'":"'N/A'",
+				"'2'":"'Enabled Always'"
+			}
+		}</item>
+    </string-array>
+
+    <string-array name="OCR">
+    </string-array>
+
+    <string-array name="OCR1">
+        <item>{
+			"Parameter":"'OCR-A'",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0xF1A8
+		}</item>
+        <item>{
+			"Parameter":"'OCR-A Variant'",
+			"Type":2,
+			"Min":0,
+			"Max":3,
+			"Hex":0xF1AC,
+			"Tag":{
+				"'0'":"'OCR-A Full ASCII'",
+				"'1'":"'OCR-A Reserved 1'",
+				"'2'":"'OCR-A Reserved 2'",
+				"'3'":"'OCR-A Banking'"
+			}
+		}</item>
+        <item>{
+			"Parameter":"'OCR-B'",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0xF1A9
+		}</item>
+        <item>{
+			"Parameter":"'OCR-B Variant'",
+			"Type":2,
+			"Min":0,
+			"Max":14,
+			"Hex":0xF1AC,
+			"Tag":{
+				"'0'":"'OCR-B Full ASCII'",
+				"'1'":"'OCR-B Banking'",
+				"'2'":"'OCR-B Limited'",
+				"'3'":"'OCR-B TD1'",
+				"'4'":"'OCR-B Passport'",
+				"'5'":"'N/A'",
+				"'6'":"'OCR-B ISBN 10-Digit'",
+				"'7'":"'OCR-B ISBN 10 or 13-Digit'",
+				"'8'":"'OCR-B TD2'",
+				"'9'":"'OCR-B Visa Type A'",
+				"'10'":"'OCR-B Visa Type B'",
+				"'11'":"'N/A'",
+				"'12'":"'N/A'",
+				"'13'":"'N/A'",
+				"'14'":"'TD Auto-Detect'"
+			}
+		}</item>
+        <item>{
+			"Parameter":"'MICR E13B'",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0xF1AA
+		}</item>
+        <item>{
+			"Parameter":"'US Currency Serial Number'",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0xF1AB
+		}</item>
+        <item>{
+			"Parameter":"'OCR Orientation'",
+			"Type":2,
+			"Min":0,
+			"Max":4,
+			"Hex":0xF1AF,
+			"Tag":{
+				"'0'":"'OCR Orientation 0'",
+				"'1'":"'OCR Orientation 270'",
+				"'2'":"'OCR Orientation 180'",
+				"'3'":"'OCR Orientation 90'",
+				"'4'":"'OCR Orientation Omnidirectional'"
+			}
+		}</item>
+        <item>{
+			"Parameter":"'OCR Lines'",
+			"Type":2,
+			"Min":1,
+			"Max":3,
+			"Hex":0xF1B3,
+			"Tag":{
+				"'1'":"'OCR 1 Line'",
+				"'2'":"'OCR 2 Line'",
+				"'3'":"'OCR 3 Line'"
+			}
+		}</item>
+        <item>{
+			"Parameter":"'OCR Minimum Characters'",
+			"Type":3,
+			"Min":3,
+			"Max":100,
+			"Hex":0xF1B1
+		}</item>
+        <item>{
+			"Parameter":"'OCR Maximum Characters'",
+			"Type":3,
+			"Min":3,
+			"Max":100,
+			"Hex":0xF1B2
+		}</item>
+        <!-- <item>{
+			"Parameter":"'OCR Subset'",
+			"Type":3,
+			"Min":1,
+			"Max":100,
+			"Hex":0xF1AE
+		}</item> -->
+        <item>{
+			"Parameter":"'OCR Quiet Zone'",
+			"Type":3,
+			"Min":20,
+			"Max":99,
+			"Hex":0xF1B7
+		}</item>
+        <item>{
+			"Parameter":"'OCR Bright Illumination'",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0xF1BD
+		}</item>
+        <!-- <item>{
+			"Parameter":"'OCR Template'",
+			"Type":3,
+			"Min":1,
+			"Max":100,
+			"Hex":0xF123
+		}</item> -->
+        <!-- <item>{
+			"Parameter":"'OCR Check Digit Modulus'",
+			"Type":3,
+			"Min":1,
+			"Max":99,
+			"Hex":0xF1B0
+		}</item> -->
+        <!-- <item>{
+			"Parameter":"'OCR Check Digit Multiplier'",
+			"Type":3,
+			"Min":0,
+			"Max":37,
+			"Hex":0xF1BC
+			}
+		}</item> -->
+        <item>{
+			"Parameter":"'OCR Check Digit Validation'",
+			"Type":2,
+			"Min":0,
+			"Max":9,
+			"Hex":0xF1B6,
+			"Tag":{
+				"'0'":"'No Check Digit'",
+				"'1'":"'Product Add Right to Left'",
+				"'2'":"'Digit Add Right to Left'",
+				"'3'":"'Product Add Left to Right'",
+				"'4'":"'Digit Add Left to Right'",
+				"'5'":"'Product Add Right to Left Simple Remainder'",
+				"'6'":"'Digit Add Right to Left Simple Remainder'",
+				"'7'":"'N/A'",
+				"'8'":"'N/A'",
+				"'9'":"'Health Industry-HIBCC43'"
+			}
+		}</item>
+        <item>{
+			"Parameter":"'Inverse OCR'",
+			"Type":2,
+			"Min":0,
+			"Max":2,
+			"Hex":0xF258,
+			"Tag":{
+				"'0'":"'Regular Only'",
+				"'1'":"'Inverse Only'",
+				"'2'":"'Autodiscriminate'"
+			}
+		}</item>
+    </string-array>
+
+    <string-array name="Data_Options">
+        <item>{
+			"Parameter":"'Transmit Code ID Character'",
+			"Type":2,
+			"Min":0,
+			"Max":2,
+			"Hex":0x2D,
+			"Tag":{
+				"'0'":"'None'",
+				"'1'":"'Aim Code ID Character'",
+				"'2'":"'Symbol Code ID Character'"
+			}
+		}</item>
+    </string-array>
+
+    <string-array name="Serial_Parameters">
+        <item>{
+			"Parameter":"'Baud Rate'",
+			"Type":2,
+			"Min":6,
+			"Max":6,
+			"Hex":0x9C,
+			"Tag":{
+				"'6'":"'9600'"
+			}
+		}</item>
+    </string-array>
+
+    <string-array name="Scanner_Options">
+        <item>{
+			"Parameter":"'Power Mode'",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0x80
+		}</item>
+        <item>{
+			"Parameter":"'Transmit No Read Message'",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0x5E
+		}</item>
+        <item>{
+			"Parameter":"'Linear Code Type Security Level'",
+			"Type":2,
+			"Min":1,
+			"Max":4,
+			"Hex":0x4E,
+			"Tag":{
+				"'1'":"'Linear Security Level 1'",
+				"'2'":"'Linear Security Level 2'",
+				"'3'":"'Linear Security Level 3'",
+				"'4'":"'Linear Security Level 4'"
+			}
+		}</item>
+        <item>{
+			"Parameter":"'Inverse 1D'",
+			"Type":2,
+			"Min":0,
+			"Max":2,
+			"Hex":0xF14A,
+			"Tag":{
+				"'0'":"'Regular'",
+				"'1'":"'Inverse Only'",
+				"'2'":"'Inverse Autodetect'"
+			}
+		}</item>
+    </string-array>
+
+    <string-array name="Device_Options1D">
+        <item>{
+			"Parameter":"'Trigger Modes'",
+			"Type":2,
+			"Min":0,
+			"Max":8,
+			"Hex":0x8A,
+			"Tag":{
+				"'0'":"'Level'",
+				"'1'":"'--'",
+				"'2'":"'Pulse'",
+				"'3'":"'--'",
+				"'4'":"'Continuous'",
+				"'5'":"'--'",
+				"'6'":"'--'",
+				"'7'":"'Blinking'",
+				"'8'":"'Host'"
+			}
+		}</item>
+        <item>{
+			"Parameter":"'Shake Scan'",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0xFF
+			}
+		}</item>
+        <item>{
+			"Parameter":"'Scan Duration'",
+			"Type":3,
+			"Min":0,
+			"Max":99,
+			"Hex":0x88
+			}
+		}</item>
+    </string-array>
+
+    <string-array name="Device_Options2D">
+        <item>{
+			"Parameter":"'Trigger Modes'",
+			"Type":2,
+			"Min":0,
+			"Max":10,
+			"Hex":0x8A,
+			"Tag":{
+				"'0'":"'Level'",
+				"'1'":"'--'",
+				"'2'":"'--'",
+				"'3'":"'--'",
+				"'4'":"'--'",
+				"'5'":"'--'",
+				"'6'":"'--'",
+				"'7'":"'Presentation Mode'",
+				"'8'":"'Host'",
+				"'9'":"'Auto Aim'",
+				"'10'":"'Auto Aim with Illumination'"
+			}
+		}</item>
+        <item>{
+			"Parameter":"'Scan Duration'",
+			"Type":3,
+			"Min":0,
+			"Max":99,
+			"Hex":0x88
+			}
+		}</item>
+        <!-- <item>{
+			"Parameter":"'Shake Scan'",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0xFF
+			}
+		}</item> -->
+        <!-- <item>{
+			"Parameter":"'Scan2Key'",
+			"Type":1,
+			"Min":0,
+			"Max":1,
+			"Hex":0x01
+		}</item> -->
+    </string-array>
+
+</resources>
